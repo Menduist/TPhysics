@@ -1,0 +1,16 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - ls -R
+    - make
+
+test-basic-collisions:
+  stage: test
+  script:
+    - make
+    - gcc -I Include/TPhysic Tests/test-basic-collisions.c libtphysic.a -o test-basic-collisions -lm
+    - ./test-basic-collisions

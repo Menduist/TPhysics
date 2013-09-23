@@ -1,0 +1,3 @@
+-I./Include/TPhysic
+-Wno-typedef-redefinition
+-Wno-missing-braces
